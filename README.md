@@ -19,7 +19,7 @@ $ mysql -h 0.0.0.0 -u root -e "CREATE DATABASE snaqme" -P 3306 -p
 ```
 $ mysql -h 0.0.0.0 -u root -D snaqme -p < db/sql_data.sql -P 3306
 ```
-* 前もってレポジトリのルートフォルダ以下に `db` を作成し `sql_data.sql` をコピーしておく。
+* 前もってレポジトリのルートフォルダ以下に `db` フォルダを作成し `sql_data.sql` をコピーしておく。
 
 # 2. Flask設定 
 * 以下の処理はレポジトリのルートフォルダで実行。
