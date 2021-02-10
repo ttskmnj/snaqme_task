@@ -13,19 +13,21 @@ $ docker run -d --name mysql-server -p 3306:3306 -e MYSQL_ROOT_PASSWORD=passwd m
 ## データベース作成
 ```
 $ mysql -h 0.0.0.0 -u root -e "CREATE DATABASE snaqme" -P 3306 -p
+Enter password: 
 ```
-
+\* 上で設定したパスワード `passwd` を入力 <br>
+\* コンテナ起動直後に実行するとエラーになる場合があるので、その場合は少し待ってから再び実行してください。
 ## sqlファイルからデータをインポート
 ```
 $ mysql -h 0.0.0.0 -u root -D snaqme -p < db/sql_data.sql -P 3306
 ```
-* 前もってレポジトリのルートフォルダ以下に `db` フォルダを作成し `sql_data.sql` をコピーしておく。
+\* 前もってレポジトリのルートフォルダ以下に `db` フォルダを作成し `sql_data.sql` をコピーしておく。
 
 # 2. Flask設定 
 * 以下の処理はレポジトリのルートフォルダで実行。
 ## 必要なライブラリのインストール
 ```
-$ pip install requirements.txt 
+$ pip install -r requirements.txt 
 ```
 
 ## 環境変数 `FLASK_APP` を設定
