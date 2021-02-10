@@ -1,10 +1,10 @@
-#  インストール手順
+#  README
 ## requirements
-Docker
-Python 3.6以上
-pip
+- Docker
+- Python 3.6以上
+- pip
 
-1. MySQL 設定
+# 1. MySQL 設定
 ## MySQLコンテナ起動
 ```
 $ docker run -d --name mysql-server -p 3306:3306 -e MYSQL_ROOT_PASSWORD=passwd mysql
@@ -21,7 +21,7 @@ $ mysql -h 0.0.0.0 -u root -D snaqme -p < db/sql_data.sql -P 3306
 ```
 * 前もって `db` フォルダ以下に `sql_data.sql` をコピーしておく。
 
-2. Flask設定 
+# 2. Flask設定 
 * 以下の処理はレポジトリのルートフォルダで実行。
 ## 必要なライブラリのインストール
 ```
@@ -38,7 +38,7 @@ $ export FLASK_APP=app.py
 $ flask run
 ```
 
-# 動作確認
+# 3. 動作確認
 ## 一覧
 |URL|METHOD|
 |---|------|
